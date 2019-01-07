@@ -1,2 +1,2 @@
 # JobHunt-Django
-Job post,search and apply features. E-commerce made with Django.
+Job post,search and apply features. E-commerce web application made with Django.
