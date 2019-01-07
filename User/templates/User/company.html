@@ -1,0 +1,53 @@
+{% extends 'User/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+<!-- Start post Area -->
+<section class="post-area section-gap">
+	<div class="container">
+		<div class="row justify-content-center d-flex">
+			<div class="col-md-8 post-list">
+				{% if info %}
+				{% for jobdetails in info%}
+
+				<div class="single-post d-flex flex-row">
+					
+					<div class="thumb">
+						<img src="{{jobdetails.Image.url}}" alt="" height="200px" width="250px">
+					</div>
+
+					<div class="details">
+						<div class="title d-flex flex-row justify-content-between">
+							<div class="titles">
+								<a href="single.html"><h4>{{jobdeatils.job_title}}</h4></a>
+								<h6>{{jobdetails.Companyname}}</h6>
+							</div>
+							<ul class="btns">
+								<li><a href=""><span class="lnr lnr-heart"></span></a></li>
+								<li><a href="" >Apply</a></li>
+							</ul>
+						</div>
+						<p>
+							{{jobdetails.job_description}}
+						</p>
+						<p>{{jobdetails.Company_email}}</p>
+						<h5>Job Nature: {{jobdetails.JobNature}}</h5>
+						<p class="address"><span class="lnr lnr-map"></span> {{jobdetails.Location}}</p>
+						<p class="address"><span class="lnr lnr-database"></span> {{jobdetails.Salary}}</p>
+					</div>
+				</div>
+                    {% endfor%}
+                    {% else %}
+                    <p><span>No jobs available!</span></p>
+                    {% endif %}
+			</div>
+					<div class="col-md-4"></div>
+		</div>
+	</div>
+
+
+
+</section>
+<!-- End-->
+{% endblock %}

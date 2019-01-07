@@ -1,0 +1,128 @@
+{% extends 'User/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+<!-- start banner Area -->
+<style type="text/css">
+.noresult{
+	text-align: center;
+	font-size: 18px;
+}
+.col-md-8{
+	padding:4px;
+	/*width:500px;*/
+	margin: 50px auto;
+	border-radius:6px;
+}
+</style>
+<br><br>
+<section class="banner-area relative" id="home">
+	<div class="overlay overlay-bg"></div>
+<!-- 	<div class="container">
+		<div class="row fullscreen d-flex align-items-center justify-content-center">
+			<div class="banner-content col-lg-12">
+				<h1 class="text-white">
+					<span>Welcome !</span> Hunt your desire job.
+				</h1>
+
+				<div class="col-md-12">
+
+				<form action="" method='GET' >
+					<div class="form-group">
+					
+					    <input type="text" name='q' placeholder="search by job title,location" value='{{request.GET.q}}'/>
+                    	<input type='Submit' class="btn btn-primary" value="Search"/>    
+                </form>
+                    </div><br>
+				<p class="text-white"> <span>Search job by Title,Location:</span>Manager, Kathmandu...</p>
+			</div>
+		</div>
+	</div> -->
+</div>
+
+<div class="container">
+		<div class="row fullscreen d-flex align-items-center justify-content-center">
+			<div class="banner-content col-lg-12">
+				<h1 class="text-white">
+					<span>Welcome !</span> Hunt your desire job.
+				</h1>
+
+				<div class="col-md-12">
+
+				<form action="" method='GET' >
+					 <div class="card-body row no-gutters align-items-center">
+                                    <div class="col-auto">
+                                        <!-- <i class="fas fa-search h4 text-body"></i> -->
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col">
+                                        <input class="form-control form-control-lg form-control-borderless" type="text" name="q" placeholder="search by Job Title, Location" value='{{request.GET.q}}'>
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col-auto">
+                                        <button class="btn btn-lg btn-success" type="submit">Search</button>
+                                    </div>
+                                    <!--end of col-->
+                                </div>   
+                </form>
+                    </div><br>
+				<p class="text-white"> <span>Search job by Title,Location:</span>Manager, Kathmandu...</p>
+			</div>
+		</div>
+	</div> 
+</section>
+<!-- End banner Area -->
+
+
+<section class="post-area section-gap">
+	<div class="container">
+		<div class="row justify-content-center d-flex">
+			<div class="col-md-8 post-list">
+				{% if info %}
+				{% for jobdetails in info%}
+				<div class="single-post d-flex flex-row">
+					
+					<div class="thumb">
+						<img src="{{jobdetails.Image.url}}" alt="" height="200px" width="250px">
+					</div>
+
+					<div class="details">
+						<div class="title d-flex flex-row justify-content-between">
+							<div class="titles">
+								<a href="single.html"><h4>{{jobdetails.job_title}}</h4></a>
+								<h6>{{jobdetails.Companyname}}</h6>
+							</div>
+							<ul class="btns">
+								<li><a href=""><span class="lnr lnr-heart"></span></a></li>
+								<li><a href="{% url 'User:apply' %}" >Apply</a></li>
+							</ul>
+						</div>
+						<p>
+							{{jobdetails.job_description}}
+						</p>
+						<p>{{jobdetails.Company_email}}</p>
+						<h5>Job Nature: {{jobdetails.JobNature}}</h5>
+						<p class="address"><span class="lnr lnr-map"></span> {{jobdetails.Location}}</p>
+						<p class="address"><span class="lnr lnr-database"></span> {{jobdetails.Salary}}</p>
+					</div>
+				</div>
+             {% endfor %}
+             {% else %}
+             <p><span>Sorry! No jobs available.</span></p>
+             {% endif %}
+		</div>
+		<div class="col-md-4"></div>
+		</div>
+	</div>
+
+</section>
+
+{% endblock %}
+
+
+
+
+
+

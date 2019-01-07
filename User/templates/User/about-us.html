@@ -1,0 +1,174 @@
+{% extends 'User/base.html' %}
+{% load static %}
+{% block title %}About-Us{% endblock %}
+{% block content %}
+
+<!-- start banner Area -->
+<section class="banner-area relative" id="home">
+	<div class="overlay overlay-bg"></div>
+	<div class="container">
+		<div class="row d-flex align-items-center justify-content-center">
+			<div class="about-content col-lg-12">
+				<h1 class="text-white">
+					About Us
+				</h1>
+				<p class="text-white link-nav"><a href="{% url 'User:base' %}">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="about-us.html"> About Us</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End banner Area -->
+<!-- Start service Area -->
+<section class="service-area section-gap" id="service">
+	<div class="container">
+		<div class="row d-flex justify-content-center">
+			<div class="col-md-8 pb-40 header-text">
+				<h1>Why Choose Us</h1>
+				<p>
+					We provide best services.
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-md-6">
+				<div class="single-service">
+					<h4><span class="lnr lnr-license"></span>To Apply for jobs</h4>
+					<p>
+						we allow you to search and apply for jobs. you can easily find your dream job.
+					</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="single-service">
+					<h4><span class="lnr lnr-phone"></span>To Post jobs</h4>
+					<p>
+						We not only provide you jobs we also provide you the employees of your requirements.
+					</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="single-service">
+					<h4><span class="lnr lnr-rocket"></span>Large community</h4>
+					<p>
+						Lots of jobs from several companies are joined with us. we provide many skillful employees to the well reknowed companies.
+					</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="single-service">
+					<h4><span class="lnr lnr-bubble"></span>Positive Reviews</h4>
+					<p>
+						we got the positive reviews from our users.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End service Area -->
+
+<!-- Start feature Area -->
+<section class="feature-area">
+	<div class="container-fluid">
+		<div class="row justify-content-center align-items-center">
+			<div class="col-lg-3 feat-img no-padding">
+				<img class="img-fluid" src="{% static 'img/pages/f1.jpg' %}" alt="img error">
+			</div>
+			<div class="col-lg-3 no-padding feat-txt">
+				<h1>Who we are</h1>
+				<p>
+					We are currently group of four members.we are trying to provides the best facility that the best companies on the market provides.
+				</p>
+			</div>
+			<div class="col-lg-3 feat-img no-padding">
+				<img class="img-fluid" src="{% static 'img/pages/f2.jpg' %}" alt="img error">
+			</div>
+			<div class="col-lg-3 no-padding feat-txt">
+				<h1>What we do</h1>
+				<p>
+					we care about you on ecommerce field. specially on job finding applications.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End feature Area -->
+
+<!-- Start team Area -->
+<section class="team-area section-gap" id="team">
+	<div class="container">
+		<div class="row d-flex justify-content-center">
+			<div class="menu-content pb-70 col-lg-8">
+				<div class="title text-center">
+					<h1 class="mb-10">The project group members</h1>
+					<p>Always there to help you</p>
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-center d-flex align-items-center">
+			<div class="col-md-3 single-team">
+				<div class="thumb">
+					<img class="img-fluid" src="{% static 'img/memberpics/achyut.jpg' %}" alt="img error">
+					<div class="align-items-center justify-content-center d-flex">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-linkedin"></i></a>
+					</div>
+				</div>
+				<div class="meta-text mt-30 text-center">
+					<h4>Achyut Pandey</h4>
+					<p>Project Leader</p>
+				</div>
+			</div>
+			<div class="col-md-3 single-team">
+				<div class="thumb">
+					<img class="img-fluid" src="{% static 'img/memberpics/rupendra.jpg' %}" alt="img error">
+					<div class="align-items-center justify-content-center d-flex">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-linkedin"></i></a>
+					</div>
+				</div>
+				<div class="meta-text mt-30 text-center">
+					<h4>Rupendra Bhujel</h4>
+					<p>Project Member</p>
+				</div>
+			</div>
+			<div class="col-md-3 single-team">
+				<div class="thumb">
+					<img class="img-fluid" src="{% static 'img/memberpics/sudip.jpg' %}" alt="img error">
+					<div class="align-items-center justify-content-center d-flex">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-linkedin"></i></a>
+					</div>
+				</div>
+				<div class="meta-text mt-30 text-center">
+					<h4>Sudip Sapkota</h4>
+					<p>Project Member</p>
+				</div>
+			</div>
+			<div class="col-md-3 single-team">
+				<div class="thumb">
+					<img class="img-fluid" src="{% static 'img/memberpics/shyam.jpg' %}" alt="img error">
+					<div class="align-items-center justify-content-center d-flex">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-linkedin"></i></a>
+					</div>
+				</div>
+				<div class="meta-text mt-30 text-center">
+					<h4>Shyam bdr. Karki</h4>
+					<p>Project Member</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+<!-- End team Area -->
+{% endblock %}
+
+
+
+

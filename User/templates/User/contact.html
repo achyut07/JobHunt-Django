@@ -1,0 +1,69 @@
+{% extends 'User/base.html' %}
+{% load static %}
+{% block title %}Contact{% endblock %}
+{% block content %}
+
+<!-- start banner Area -->
+<section class="banner-area relative" id="home">
+	<div class="overlay overlay-bg"></div>
+	<div class="container">
+		<div class="row d-flex align-items-center justify-content-center">
+			<div class="about-content col-lg-12">
+				<h1 class="text-white">
+					Contact Us
+				</h1>
+				<p class="text-white"><a href="{% url 'User:base' %}">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="{% url 'User:contact'%}"> Contact Us</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End banner Area -->
+
+<!-- Start service Area -->
+<section class="service-area section-gap" id="service">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-6">
+				<div class="single-service">
+					<h4><span class="lnr lnr-license"></span>Where we are</h4>
+					<p>
+						We are on the capital of country.<br>
+						Location: Kathmandu , Nepal
+					</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="single-service">
+					<h4><span class="lnr lnr-phone"></span>Contact Number</h4>
+					<p>
+						+977-9867120866<br>
+						+977-9869111804<br>
+						01-5090819
+					</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="single-service">
+					<h4><span class="lnr lnr-rocket"></span>E-mail Addresses</h4>
+					<p>
+						achyutpandey328@gmail.com<br>
+						sudipsapkota18@gmail.com
+					</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="single-service">
+					<h4><span class="lnr lnr-bubble"></span>Maps</h4>
+					<p>
+						<img class="img-fluid" src="{% static 'img/contactmap.jpg' %}">
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End service Area -->
+{% endblock %}
+
+
+
